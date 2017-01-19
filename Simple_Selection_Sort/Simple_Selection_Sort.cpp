@@ -5,10 +5,10 @@ void SimpleSelectionSort(Type a[], int n)
 {
 	for (int i = 0; i != n - 1; ++i)
 	{
-		int index = i;
+		int low = i;
 		for (int j = i + 1; j != n; ++j)
-			if (a[index] > a[j]) index = j;
-		std::swap(a[i], a[index]);
+			if (a[low] > a[j]) low = j;
+		std::swap(a[i], a[low]);
 	}
 }
 
